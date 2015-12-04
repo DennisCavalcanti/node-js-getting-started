@@ -4,7 +4,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
 			$scope.operadoras = [];	
 			
 			var carregarContatos = function (){
-			$http.get("https://warm-crag-7796.herokuapp.com/contatos").success(function(data, status){
+			$http.get("/backend/contatos").success(function(data, status){
 				$scope.contatos = data;
 				}).error(function (data, status){
 					$scope.message = "Aconteceu um problema: " + data;
@@ -12,7 +12,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
 			};
 			
 			var carregarOperadoras = function (){
-			$http.get("https://warm-crag-7796.herokuapp.com/operadoras").success(function(data){
+			$http.get("/backend/operadoras").success(function(data){
 				$scope.operadoras = data;
 				});	
 			};
@@ -22,7 +22,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
 			//$scope.contatos.push({nome: nome, telefone: telefone});
 			//$scope.contatos.push(angular.copy(contato));
 			contato.data = new Date();
-			$http.post("https://warm-crag-7796.herokuapp.com/contatos", contato).success(function(data){
+			$http.post("/backend/contatos", contato).success(function(data){
 				delete $scope.contato;
 				$scope.contatoForm.$setPristine();
 				carregarContatos(); //$scope.contatos.push(angular.copy(contatos));
