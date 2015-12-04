@@ -1,26 +1,36 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.1.5",
-  "description": "A sample Node.js app using Express 4",
-  "main": "index.js",
+  "name": "backend",
+  "version": "1.0.0",
   "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "ejs": "2.3.3",
-    "express": "4.13.3"
-  },
-  "engines": {
-    "node": "0.12.7"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/rodrigobranas/youtube"
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express"
+    "Angularjs",
+    "youtube",
+    "learningcode",
+    "javascript",
+    "express",
+    "node"
   ],
-  "license": "MIT"
+  "dependencies": {
+      "body-parser": "^1.5.2",
+    "errorhandler": "^1.1.1",
+    "express": "^4.8.0",
+    "express-session": "^1.7.2",
+    "jade": "^1.5.0",
+    "method-override": "^2.1.2",
+    "morgan": "^1.2.2",
+    "multer": "^0.1.3",
+    "serve-favicon": "^2.0.1"
+  }
+  "author": "Rodrigo Branas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodrigobranas/youtube/issues"
+  },
+  "homepage": "https://github.com/rodrigobranas/youtube"
 }
